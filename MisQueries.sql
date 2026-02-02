@@ -5,6 +5,7 @@ Ejemplo
 Ejemplo
 */
 
+-- Hola 
 -- 1. Definir qué BBDD se va a usar
 USE Chinook;
 

@@ -1,0 +1,55 @@
+
+/*
+Ejemplo
+Ejemplo
+Ejemplo
+*/
+
+-- 1. Definir que BBDD vamos a usar
+
+USE sakila;
+
+-- 2. Seleccionar datos de tabla
+-- * equivale a todo (filas o columnas)
+
+-- Tabla
+SELECT * FROM city;
+
+-- Vistas
+SELECT * FROM actor_info;
+
+-- Seleccionar columnas específicas
+SELECT
+	title,
+	special_features
+FROM film;
+    
+-- 3. Limite de filas
+
+SELECT*FROM film
+LIMIT 25;
+
+SELECT 
+	film_id,
+    title,
+    rental_duration
+FROM film
+LIMIT 25;
+
+-- 4. Uso de alias
+SELECT
+	title AS nombre_pelicula,
+    description AS descripcion_pelicula,
+    release_year AS ano
+FROM film;
+
+-- 5. Filtrar datos
+SELECT * FROM Film
+WHERE length = 50; -- Quiero que salga solo los que tengan dato 50
+
+SELECT * FROM Film
+WHERE length != 50; -- No quiero que salga los que tengan dato 50
+
+SELECT * FROM Film
+WHERE length <> 50; -- No quiero que salga los que tengan dato 50
+

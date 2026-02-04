@@ -55,4 +55,43 @@ WHERE BillingCountry != 'Canada'; -- No quiero que salga canada
 SELECT * FROM Invoice
 WHERE BillingCountry <> 'Canada'; -- No quiero que salga canada
 
+-- 6.Filtro de texto:  Wildcard (%) - Busqueda de texto
+
+SELECT * FROM Track
+WHERE Composer = 'Tony'; -- Busqueda un texto exacto
+
+-- a. Inicio del texto
+SELECT * FROM Track
+WHERE Composer LIKE 'Tony%'; -- Texto a la izquierda puede ser cualquier cosa
+
+-- b. Final del texto
+SELECT * FROM Track
+WHERE Composer LIKE '%Tony'; -- Texto a la derecha puede ser cualquier cosa
+
+-- c. En el texto
+SELECT * FROM Track
+WHERE Composer LIKE '%Tony%'; -- Texto a la derecha o izquierda puede ser cualquier cosa
+
+-- d. And 
+SELECT * FROM Track
+WHERE Composer LIKE '%Tony%'AND Composer LIKE '%Ozzy%'; -- Las 2 condiciones se tiene que cumplir
+
+-- d. OR  
+SELECT * FROM Track
+WHERE Composer LIKE '%Tony%' OR Composer LIKE '%Ozzy%'; -- Basta que 1 condición se cumpla
+
+
+
+-- 7. Ordenar datos
+-- ASC (Ascendente): Menor a mayor
+-- DESC (Descendente): Mayor a menor
+
+
+-- 8. Condicionales
+
+
+
+
+-- 9. Agregaciones y agrupaciones
+
 
